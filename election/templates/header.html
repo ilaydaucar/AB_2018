@@ -15,7 +15,20 @@
         <li class="active"><a href="#">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
+          {% if request.user.email%}
+             <div class="mail" style="color: white;">
+                 {{ request.user.email }}
+                  <button style="background-color: black; margin-top: 15px; color: white;"><a href="/logout_view/">Logout</a></button>
+
+             </div>
+           {% else %}
+              <button style="background-color: black; margin-top: 15px; color: white;"><a href="/login/">Login</a></button>
+          {% endif %}
+
       </ul>
     </div><!--/.nav-collapse -->
+
+
+
   </div>
 </nav>

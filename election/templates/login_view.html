@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django Login Page</title>
+    <style>
+        body{
+            text-align: center;
+            margin-top: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login Page</h1>
+         <form action="/login/" method="post">{% csrf_token %}
+            <table border="1">
+                Email : <input type="text" name="email"><br>
+                Parola : <input type="password" name="password"><br>
+                <input type="submit" value="Gönder">
+            </table>
+        </form>
+    </div>
+
+</body>
+</html>

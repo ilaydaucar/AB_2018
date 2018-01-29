@@ -12,9 +12,29 @@
             <p class="lead">Use this document as
             a way to quickly start any new project.
             </p>
+            <form action="/" method="post">{% csrf_token %}
+                <table border="1">
+                    Ad : <input type="text" name="ad"><br>
+                    Email : <input type="text" name="email"><br>
+                    <input type="submit" value="Gönder">
+                </table>
+            </form>
         </div>
+        <div class="container">
+            <ul>
+                {% for surveys in querysets %}
+                    <li> {{ surveys.name }}</li>
+                    <li>{{ surveys.created_at }}</li>
+
+                {% endfor %}
+
+            </ul>
+        </div>
+            {{ name }}
+
     </div>
     {% endblock %}
+
 </body>
 
 </html>

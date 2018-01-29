@@ -7,6 +7,7 @@ class Survey(models.Model):
     created_at = models.DateTimeField('Oluşturulma Tarihi', null=True, blank=True, auto_now=True)
     updated_at = models.DateTimeField('Güncellenme Tarihi', null=True, blank=True, auto_now_add=True)
 
+
     class Meta:
         verbose_name = 'Araştırma'
         verbose_name_plural = 'Araştırmalar'
